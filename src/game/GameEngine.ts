@@ -155,7 +155,7 @@ export class GameEngine {
     }
   }
 
-  private update(dt: number) {
+  private update(_dt: number) {
     if (this.state !== GameState.PLAYING) return
 
     this.gameTime++
@@ -407,7 +407,7 @@ export class GameEngine {
     ctx.textAlign = 'start'
   }
 
-  handleClick(x: number, y: number) {
+  handleClick(_x: number, y: number) {
     if (this.state === GameState.MENU) {
       this.start()
     } else if (this.state === GameState.PAUSED) {

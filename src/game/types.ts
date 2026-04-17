@@ -10,12 +10,13 @@ export interface Rect {
   height: number
 }
 
-export enum GameState {
-  MENU = 'menu',
-  PLAYING = 'playing',
-  PAUSED = 'paused',
-  GAME_OVER = 'gameOver',
-}
+export const GameState = {
+  MENU: 'menu',
+  PLAYING: 'playing',
+  PAUSED: 'paused',
+  GAME_OVER: 'gameOver',
+} as const
+export type GameState = typeof GameState[keyof typeof GameState]
 
 export interface GameStats {
   score: number
